@@ -17,14 +17,14 @@ Download [the latest JAR][1] or grab via Maven:
 
 For gradle:
 
-        compile 'com.github.masontool:reflect:1.0.0'
+        compile 'com.github.masontool:reflect:2.1.0'
 
-For maven: 
+For maven:
 
         <dependency>
           <groupId>com.github.masontool</groupId>
           <artifactId>reflect</artifactId>
-          <version>1.0.0</version>
+          <version>2.1.0</version>
         </dependency>
 
 ## Useful
@@ -54,7 +54,7 @@ ClassB:
         class ClassB {
             int value = 5;
         }
-    
+
 ClassC:
 
         package com.mason.meizu.sample.prvclass;
@@ -64,47 +64,34 @@ ClassC:
 
 We suppose all the classes, parameters, methods should be reflected. You can do like this:
 
-1. Get / Set static value in class. 
+1. Get / Set static value in class.
 
-        ReflectClass clazzA = new ReflectClass("com.mason.meizu.sample.prvclass.ClassA");
+        RClass clazzA = new RClass("com.mason.meizu.sample.prvclass.ClassA");
         clazzA.setValue("staticString", "static changed!!!!!");
-        String staticString = (String) clazzA.getValue("staticString");
-        
-2. Get / Set normal value in class. 
+        String staticString = clazzA.getValue("staticString");
 
-        Object instance = clazzA.newInstance(null);//get instance 
-        ReflectInstance instanceA = new ReflectInstance(instance); //wrap with ReflectInstance
+2. Get / Set normal value in class.
+
+        RInstance instanceA = clazzA.newWrappedInstance();
         instanceA.setValue("normalString", "normal changed!!!!!");
-        String normalString = (String) instanceA.getValue("normalString");
+        String normalString = instanceA.getValue("normalString");
 
 3. Excute static method.
 
-        ReflectParam plusParam = new ReflectParam.Builder()
-                .add(5)//integer default, no need to specify the type
-                .add(4)//integer defaul, no need to specify the type
-                .create();
-        Integer plusResult = (Integer) clazzA.execute("plus", plusParam);
+        Integer plusResult = clazzA.execute("plus", Integer.class, 5, Integer.class, 4);
 
 4. Excute normal method.
 
-        ReflectParam minusParam = new ReflectParam.Builder()
-                .add(long.class, 5)
-                .add(long.class, 4)
-                .create();
-        long minusResult = (long) instanceA.execute("minus", minusParam);
+        long minusResult = instanceA.execute("minus", long.class, 5, long.class, 4);
 
 5. Support nested call. Here is a complex sample
 
-        ReflectClass clazzB = new ReflectClass("com.mason.meizu.sample.prvclass.ClassB");
-        ReflectInstance instanceB = new ReflectInstance(clazzB.newInstance(null));
-        ReflectClass clazzC = new ReflectClass("com.mason.meizu.sample.prvclass.ClassC");
-        ReflectInstance instanceC = new ReflectInstance(clazzC.newInstance(null));
-        ReflectParam complexParam = new ReflectParam.Builder()
-                .add(instanceB)
-                .add(instanceC)
-                .create();
-        int complexResult = (int) clazzA.execute("plus", complexParam);
-        
+			RClass clazzB = new RClass("com.mason.meizu.sample.prvclass.ClassB");
+			RClass clazzC = new RClass("com.mason.meizu.sample.prvclass.ClassC");
+			int complexResult1 = clazzA.execute("plus",
+					clazzB, clazzB.newInstance(),
+					clazzC, clazzC.newInstance());
+
 
 ## Feedback
    Any question you can contact me with email 307416073@qq.com.
