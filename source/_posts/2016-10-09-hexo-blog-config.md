@@ -1,7 +1,9 @@
 ---
 title: blog的hexo配置移植方法
 date: 2016-10-09 11:59:08
-tags: [hexo, github]
+tags: 
+- hexo
+- github
 ---
 
 介绍如何将个人博客的hexo后台移植到另外的设备上, 使可以多平台上可以同步操作博客后台.

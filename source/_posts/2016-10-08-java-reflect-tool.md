@@ -1,7 +1,10 @@
 ---
 title: Java Reflect Tool
 date: 2016-10-08 20:53:02
-tags: [java, android, 反射]
+tags: 
+- java
+- android
+- 反射
 ---
 
 

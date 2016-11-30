@@ -3,10 +3,10 @@
 # ---------------------------------------------------------------
 
 # Put your favicon.ico into `hexo-site/source/` directory.
-favicon: /favicon.ico
+favicon: /doudou.jpg
 
 # Set default keywords (Use a comma to separate)
-keywords: "Hexo, NexT"
+keywords: "个人博客"
 
 # Set rss to false to disable feed link.
 # Leave rss as empty to use site's feed link.
@@ -14,9 +14,7 @@ keywords: "Hexo, NexT"
 rss:
 
 # Specify the date when the site was setup
-#since: 2015
-
-
+since: 2016
 
 
 # ---------------------------------------------------------------
@@ -26,11 +24,16 @@ rss:
 # When running the site in a subdirectory (e.g. domain.tld/blog), remove the leading slash (/archives -> archives)
 menu:
   home: /
-  #categories: /categories
+ 
   #about: /about
   archives: /archives
+  categories: /categories
   tags: /tags
-  #commonweal: /404.html
+  commonweal: /404.html
+
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: /images/wx.png
+alipay: /images/jfb.png
 
 
 # Enable/Disable menu icons.
@@ -47,8 +50,6 @@ menu_icons:
   tags: tags
   archives: archive
   commonweal: heartbeat
-
-
 
 
 # ---------------------------------------------------------------
@@ -117,7 +118,8 @@ font:
 # Social Links
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
-#social:
+social:
+  GitHub: https://github.com/masonTool
   #LinkLabel: Link
 
 
@@ -139,6 +141,7 @@ social_icons:
 # in theme directory(source/images): /images/avatar.jpg
 # in site  directory(source/uploads): /uploads/avatar.jpg
 #avatar:
+  avatar: /images/avatar.jpg
 
 
 # Table Of Contents in the Sidebar
@@ -166,8 +169,8 @@ sidebar:
   #  - always  expand for all pages automatically
   #  - hide    expand only when click on the sidebar toggle icon.
   #  - remove  Totally remove sidebar including sidebar toggler.
-  display: post
-  #display: always
+  # display: post
+  display: always
   #display: hide
   #display: remove
 
@@ -208,7 +211,7 @@ scroll_to_more: true
 # Automatically Excerpt. Not recommand.
 # Please use <!-- more --> in the post to control excerpt accurately.
 auto_excerpt:
-  enable: false
+  enable: true
   length: 150
 
 
@@ -235,10 +238,10 @@ mathjax:
 #swiftype_key:
 
 # Baidu Analytics ID
-#baidu_analytics:
+baidu_analytics: b4a6f029b729806570bf2abd1a553829
 
 # Duoshuo ShortName
-#duoshuo_shortname:
+duoshuo_shortname: mapeiyu
 
 # Disqus
 #disqus_shortname:
@@ -254,7 +257,7 @@ mathjax:
 #add_this_id:
 
 # Share
-#duoshuo_share: true
+duoshuo_share: true
 
 # Google Webmaster tools verification setting
 # See: https://www.google.com/webmasters/
@@ -273,9 +276,9 @@ mathjax:
 # you can visit http://dev.duoshuo.com get duoshuo user id.
 duoshuo_info:
   ua_enable: true
-  admin_enable: false
-  user_id: 0
-  #admin_nickname: Author
+  admin_enable: true
+  user_id: 6358638946343192000
+  admin_nickname: 英明神武的博主大人
 
 
 # Facebook SDK Support.
