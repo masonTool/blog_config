@@ -1,6 +1,9 @@
 ---
 title: RX操作符概述
 date: 2016-11-07 18:43:34
+categories:
+- 技术
+- 转载
 tags:
 - RX
 ---

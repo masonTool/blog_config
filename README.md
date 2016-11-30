@@ -2,6 +2,13 @@
 
 介绍如何将个人博客的hexo后台移植到另外的设备上, 使可以多平台上可以同步操作博客后台.
 
+### 关于本站点
+
+百度统计查看   http://tongji.baidu.com/web/22726957/homepage/index
+多说管理后台   http://mapeiyu.duoshuo.com/admin/
+LeanCloud文章统计   https://leancloud.cn/applist.html#/apps
+
+
 ### 0. 进入到你的hexo目录, 执行git init 生成git仓库, 将git仓库上传到github.
 
     //初始化仓库
@@ -52,3 +59,5 @@
 ### 5. 移动node_modules到原blog_config文件中. 再删除blog_config1
 
 完成了移植. 此时你可以在多设备上写文章. 通过git来管理配置了. 
+
+

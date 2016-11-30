@@ -1,6 +1,9 @@
 ---
 title: Java Reflect Tool
 date: 2016-10-08 20:53:02
+categories:
+- 技术
+- 原创
 tags: 
 - java
 - android
