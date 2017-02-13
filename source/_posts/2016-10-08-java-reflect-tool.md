@@ -2,12 +2,11 @@
 title: Java Reflect Tool
 date: 2016-10-08 20:53:02
 categories:
-- 技术
-- 原创
+- 原创组件
 tags: 
 - java
 - android
-- 反射
+- reflect
 ---
 
 

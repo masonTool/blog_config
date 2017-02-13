@@ -2,12 +2,11 @@
 title: 反射工具reflect更新到2.2.0版本(有重料)
 date: 2017-02-09 14:46:38
 categories:
-- 技术
-- 原创
+- 原创组件
 tags: 
 - java
 - android
-- 反射
+- reflect
 ---
 
 增加反射interface的实例化支持. 还添加了中文文档说明哦。

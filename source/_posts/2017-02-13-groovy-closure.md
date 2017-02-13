@@ -2,8 +2,7 @@
 title: groovy closure
 date: 2017-02-13 11:18:28
 categories:
-- 技术
-- 原创
+- gradle开发
 tags: 
 - groovy
 - gradle

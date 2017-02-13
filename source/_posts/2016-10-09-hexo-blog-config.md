@@ -2,8 +2,7 @@
 title: blog的hexo配置移植方法
 date: 2016-10-09 11:59:08
 categories:
-- 技术
-- 原创
+- 博客开发
 tags: 
 - hexo
 - github
