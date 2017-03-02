@@ -14,7 +14,6 @@ tags:
 [点我传送门](https://github.com/masonTool/reflect)  
 
 <center>![我有料](JYEY6NH06E91.jpg)</center >
-额，我是料!!
 
 <center>![](jinguanzhang.jpg)
 

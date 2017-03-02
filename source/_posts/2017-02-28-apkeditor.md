@@ -78,8 +78,6 @@ ApkEditor是一个Android应用的Gradle插件.
 * 邮件 [mason.mpy@gmail.com](mason.mpy@gmail.com)
 
 
-不认识不是老司机
----------
 <center>![福利](longzeluola.jpg)</center >
 
 

@@ -173,8 +173,6 @@ tags:
 抽时间我再把他翻译一下， 方便理解。
 
 
-## 放松一下吧。
-
 <center>![福利](ssssss.jpg)</center >
 
 

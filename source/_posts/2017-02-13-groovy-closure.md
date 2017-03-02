@@ -147,5 +147,4 @@ dog.childmind()
 dog.childmind.delegate  = cat;
 dog.childmind()
 ```
-<center>OVER! 福利来喽!</center >
 <center>![料](11.jpg)</center >
