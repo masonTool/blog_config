@@ -63,5 +63,29 @@ tags:
     http://blog.csdn.net/hp910315/article/details/52701809
 
 #### 方案确定
-在此， 确定了方案为使用 aspectJ来实现通过注解添加逻辑。一切参照hugo的代码实现即可。 我的简易实现代码， 稍后补上。 
+在此， 确定了方案为使用 aspectJ来实现通过注解添加逻辑。一切参照hugo的代码实现即可。 我的简易实现代码.
+    https://github.com/masonTool/AspectJDemo
+
+#### AspectJ粗浅的理解
+对于AspectJ， 这里记录一个粗浅的理解。
+1. AspectJ可以理解为java的拓展。因为他是兼容java的。 
+2. AspectJ编译时使用自己的编译器ajc
+3. 是一种面向切面的语言。 切面与模块是相对应的。如果把面向对象形容为纵向， 则切面可以理解为横向。特别适合做log, 权限管理，埋点， 等等。将逻辑切入对象，同时又不破坏对象的逻辑独立性和耦合性。
+4. 一个最关键的概念就是Join Points. 翻译为"切入点". 在Java中他定义了很多切入点，比如函数调用前， 函数执行前，函数执行后， 变量get时， 变量set时。。。总之发挥你的想象，基本上你想切入的点他都定义了。
+5. 怎么做到切入某个点呢？很自然， 首先筛选出想要切入的点(pointcut)， 然后处理筛选出来的点的逻辑(advice). 就是这样了。然后使用ajc去编译就可以了。
+6. 注意：如果你想在jar包中或者aar中使用aspectJ,不只需要使用ajc去编译生成包， 同时引用者也要使用ajc去编译才行。
+
+如果不想啃官方文档  https://eclipse.org/aspectj/docs.php
+这篇文章可以带你入门  http://blog.csdn.net/innost/article/details/49387395
+
+#### 一点改进
+要想使用AspectJ不只需要引用`org.aspectj:aspectjrt:1.8.6`就完事了, 这个包只是让你编写代码用的，还需要自己处理编译逻辑。个人认为这个地方可以做得更简易一些， 就像groovy插件的自动编译一样。 
+
+所以我这里写了一个简易的gradle插件，copy到你的工程apply一下，就可以任性的编写aspectj代码，同时你也不用理会编译的事情了。
+https://github.com/masonTool/AspectJDemo/blob/master/aspect_compile.gradle
+
+你可以直接使用，或者只做很小的改动来使用.当然这还只一个demo版本，但如果你是像我一样的新手，同时又不需要过多的高级配置的话，这已经足够好了.有时间我会把他以gradleplugin的形式发布到jcenter，让新手可以更方便的使用。
+
+<center>![tt](qc.jpg)</center>
+
 
